@@ -1,0 +1,60 @@
+<h1>Editing your RSVP</h1>
+
+<%= form_for :response, url: response_path(@response), method: :patch do |f| %>
+
+  <% if @response.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@response.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @response.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form_for :response, url: responses_path do |f| %>
+    <p>
+      <strong><%= f.label :first_name %></strong><br>
+      <%= f.text_field :first_name, :required => true %>
+    </p>
+    <p>
+      <strong><%= f.label :last_name %><strong><br>
+      <%= f.text_field :last_name, :required => true%>
+    </p>
+    <p>
+      <br>
+      <%= radio_button_tag(:attending, true) %>
+        <strong><%= label_tag(:attending, "We'll be there!") %></strong><br>
+      <%= radio_button_tag(:attending, false) %>
+        <strong><%= label_tag(:attending, "Unfortunately, we are unable to attend.") %></strong><br>
+    </p>
+    <p>
+      <strong><%= f.label "Number of attendees:" %></strong><br>
+      <%= "Please input '0' if you are unable to attend." %><br>
+      <%= f.number_field :number_of_attendees, :required => true %>
+    </p>
+    <p>
+      <strong>Food Allergies:</strong>
+      <%= f.label "Please let us know if you have any food allergies we should be aware of." %><br>
+      <%= f.text_area :food_allergies %>
+    </p>
+    <p>
+      <strong><%= "Song Requests:" %></strong><br>
+      <%= f.label "Please name a song that will get you on the dance floor!" %><br>
+      <br>
+      <strong>Song Title:</strong><br>
+      <%= f.text_area :song_title %><br>
+      <strong>Singer or Band:</strong><br>
+      <%= f.text_area :singer %>
+    <p>
+    <p>
+      <strong><%= f.label "Feel free to leave a message for the happy couple:" %></strong><br>
+      <%= f.text_area :comment %>
+    </p>
+        <%= f.submit %><br>
+  <% end %>
+  <%= link_to 'Home', root_path %> |
+  <%= link_to 'Back', responses_path %>

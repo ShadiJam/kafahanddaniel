@@ -1,0 +1,29 @@
+<h1>All RSVPs</h1>
+<%= link_to 'New RSVP', new_response_path %>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Attending</th>
+    <th>Number of Attendees</th>
+    <th>Allergies</th>
+    <th>Song Requests</th>
+    <th>Artist</th>
+    <th>Messages</th>
+  </tr>
+
+  <% @responses.each do |response| %>
+    <tr>
+      <td><%= response.first_name %></td>
+      <td><%= response.last_name %></td>
+      <td><%= response.attending %></td>
+      <td><%= response.number_of_attendees %></td>
+      <td><%= response.food_allergies %></td>
+      <td><%= response.song_title %></td>
+      <td><%= response.singer %></td>
+      <td><%= response.comment %></td>
+      <td><%= link_to 'Show', response_path(response) %></td> |
+      <td><%= link_to 'Edit', edit_response_path(response) %></td>
+    </tr>
+  <% end %>
+</table>
