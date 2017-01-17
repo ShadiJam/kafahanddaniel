@@ -14,15 +14,14 @@ p {
   line-height: 2rem;
 }
 
-a.button-collapse {
-  padding-top: 15px;
+a.button-collapse img {
+  max-width: 120px;
+  max-height: 120px;
+  padding-top: 10px;
+  padding-right: 20px;
 }
 
-@media screen and (min-width: 650px) {
-.js a.button-collapse {
-display: block !important;
-}
-}
+
 
 .parallax-container {
   min-height: 380px;
@@ -42,7 +41,7 @@ div#index-banner.parallax-container {
 }
 
 div.section.no-pad-bot {
-  padding-top: 300px;
+  color: grey;
 }
 
 div.parallax img {
