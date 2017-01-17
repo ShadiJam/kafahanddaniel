@@ -6,8 +6,9 @@
  * Made By MaterializeCSS.com
  */
 
-nav.pink {
+nav {
   height: 100px;
+  background-color: #CA054D;
 }
 
 p {
@@ -21,7 +22,11 @@ a.button-collapse img {
   padding-right: 20px;
 }
 
-
+button.btn.waves-effect.waves-light {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  background-color: #CA054D;
+}
 
 .parallax-container {
   min-height: 380px;
@@ -41,11 +46,20 @@ div#index-banner.parallax-container {
 }
 
 div.section.no-pad-bot {
-  color: grey;
+  color: white;
 }
 
 div.parallax img {
   width: 600px;
+}
+
+div.icon-block img {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+li.rsvp a {
+  color: white;
 }
 
 @media only screen and (max-width : 1024px) {

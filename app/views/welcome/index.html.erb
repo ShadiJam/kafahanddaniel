@@ -1,42 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Parallax Template - Materialize</title>
-
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
-  <nav class="pink" role="navigation">
-    <div class="nav-wrapper container">
-      <ul class="right hide-on-med-and-down">
-
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li>  <%= link_to 'New RSVP', new_response_path %> </li>
-        <li>  <%= link_to 'All Responses', controller: 'responses' %> </li>
-        <% if user_signed_in? %>
-            Logged in as <strong><%= current_user.email %></strong>.
-        <li>  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </li>
-        <li>  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
-        <% else %>
-        <li>  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
-        <li>  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> </li>
-        <% end %>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><img src="/assets/animal.jpg"/></a>
-    </div>
-  </nav>
-
-  <p class="navbar-text pull-right">
-
-
-
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
@@ -57,32 +18,28 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><img src="/assets/butterfly.jpg"/></h2>
+            <h2 class="center brown-text"><img src="/assets/animal.jpg"/></h2>
             <h5 class="center">The Who</h5>
 
-            <p class="light">Due to the fact that Shadi Jam is the bestestestestest cousin on the planet (EVER!), Daniel Haggerty and Kafah Bachari had the opportunity to meet one starry night. We all approved of Dan, we were just worried about Kafah being just sane enough for this to work out.</p>
+            <p class="center light">Kafah Bachari<br>Daniel Haggerty<br>The Wingmen:<br>Haitham and Laith<br>invite you to celebrate this important<br>day by dancing the night away!</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><img src="/assets/butterfly.jpg"/></h2>
+            <h2 class="center brown-text"><img src="/assets/animal.jpg"/></h2>
             <h5 class="center">The When</h5>
 
-            <p class="light">Saturday, April 8, 2017</p>
-            <p class="light">6:00 PM</p>
-            <p class="light">Attire: Spring Fun!</p>
+            <p class="center light">Saturday, April 8, 2017<br>6:00 PM<br>Attire: Spring Fun!</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><img src="/assets/butterfly.jpg"/></h2>
+            <h2 class="center brown-text"><img src="/assets/animal.jpg"/></h2>
             <h5 class="center">The Where</h5>
 
-            <p class="light">Cockrell Butterfly Center</p>
-            <p class="light">5555 Hermann Park Drive</p>
-            <p class="light">Houston, TX 77030</p>
+            <p class="center light">Cockrell Butterfly Center<br>5555 Hermann Park Drive<br>Houston, TX 77030</p>
           </div>
         </div>
       </div>
@@ -108,8 +65,8 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <h4>Our Story</h4>
+          <p class="left-align light">Due to the fact that Shadi Jam is the bestestestestest cousin on the planet (EVER!), Daniel Haggerty and Kafah Bachari had the opportunity to meet one starry night. We all approved of Dan, we were just worried about Kafah being just sane enough for this to work out.</p>
         </div>
       </div>
 
@@ -132,43 +89,31 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
+          <h5 class="white-text">Don't forget to RSVP!</h5>
           <p class="grey-text text-lighten-4"></p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="white-text">Wedding</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li class="rsvp">  <%= link_to 'RSVP', new_response_path %> </li>
+            <li><a class="white-text" href="#!">Registry</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+          <h5 class="white-text">Travel</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="http://travel.usnews.com/Hotels/Houston_TX/">Accommodation</a></li>
+            <li><a class="white-text" href="http://houmuse.org/">Museums</a></li>
+            <li><a class="white-text" href="https://www.thrillist.com/houston">Eat and Drink</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Made by Shadi Jam - bestestest cousin everestestestest...in case you couldn't tell.
       </div>
     </div>
   </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  </body>
-</html>

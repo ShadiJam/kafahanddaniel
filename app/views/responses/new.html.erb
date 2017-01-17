@@ -1,4 +1,4 @@
-<h1>RSVP</h1>
+
 <%= form_for :response, url: responses_path do |f| %>
 
 <% if @response.errors.any? %>
@@ -15,40 +15,59 @@
     </div>
 <% end %>
 
-  <p>
-    <%= f.label "Name or Family Name" %>
-    <%= f.text_field :full_name, :required => true %>
-  </p>
-  <p>
-    <%= radio_button_tag(:attending, true) %>
-      <strong><%= label_tag(:attending, "We'll be there!") %></strong><br>
-    <%= radio_button_tag(:attending, false) %>
-      <strong><%= label_tag(:attending, "Unfortunately, we are unable to attend.") %></strong><br>
-  </p>
-  <p>
-    <strong><%= f.label "Number of attendees:" %></strong><br>
-    <%= "Please input '0' if you are unable to attend." %><br>
-    <%= f.number_field :number_of_attendees, :required => true %>
-  </p>
-  <p>
-    <strong>Food Allergies:</strong>
-    <%= f.label "Please let us know if you have any food allergies we should be aware of." %><br>
-    <%= f.text_area :food_allergies %>
-  </p>
-  <p>
-    <strong><%= "Song Requests:" %></strong><br>
-    <%= f.label "Please name a song that will get you on the dance floor!" %><br>
-    <br>
-    <strong>Song Title:</strong><br>
-    <%= f.text_area :song_title %><br>
-    <strong>Singer or Band:</strong><br>
-    <%= f.text_area :singer %>
-  <p>
-  <p>
-    <strong><%= f.label "Feel free to leave a message for the happy couple:" %></strong><br>
-    <%= f.text_area :comment %>
-  </p>
-  <p>
-      <%= f.submit %><br>
-  </p>
+
+<div class="row">
+  <h1 class="header col s12 light">RSVP</h1>
+   <form class="col s12">
+     <div class="row">
+       <div class="input-field col s12">
+         <%= f.label "Name or Family Name" %>
+         <%= f.text_field :full_name, :required => true %>
+       </div>
+     </div>
+
+    <div class="row">
+     <div class="input-field col s12">
+        <select>
+            <option value="" disabled selected></option>
+            <option value="1"><%= label_tag(:attending, "We'll be there!") %></option>
+            <option value="2"><%= label_tag(:attending, "Unfortunately, we are unable to attend.") %></option>
+        </select>
+        <label>Will you attend?</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.label "Number of attendees:" %>
+        <%= f.number_field :number_of_attendees %>
+      </div>
+    </div>
+     <div class="row">
+       <div class="input-field col s12">
+         <%= f.label "Any food allergies we should know about?" %>
+         <%= f.text_field :food_allergies %>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s12">
+         <%= f.label "Please name a song that will get you on the dance floor!" %>
+         <%= f.text_field :song_title %><br>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s12">
+         <%= f.label "Artist/Band/Singer name goes here!" %>
+         <%= f.text_field :singer %>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s12">
+         <%= f.label "Feel free to leave a message for the happy couple:" %>
+         <%= f.text_field :comment %>
+       </div>
+     </div>
+   </form>
+ </div>
+<button class="btn waves-effect waves-light" type="submit" name="action">Save RSVP</button>
+
 <% end %>
