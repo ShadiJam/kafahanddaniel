@@ -5,7 +5,7 @@
     <div id="error_explanation">
       <h2>
         <%= pluralize(@response.errors.count, "error") %> prohibited
-        this article from being saved:
+        this RSVP from being saved:
       </h2>
       <ul>
         <% @response.errors.full_messages.each do |msg| %>
@@ -15,23 +15,11 @@
     </div>
 <% end %>
 
-<% if @response.attending? %>
-  <%= @response.number_of_attendees.each do |render| %>
-    <div id="name_input">
-        <p>
-          <strong><%= f.label :first_name %></strong><br>
-          <%= f.text_field :first_name, :required => true %>
-        </p>
-        <p>
-          <strong><%= f.label :last_name %><strong><br>
-          <%= f.text_field :last_name, :required => true%>
-        </p>
-      <% end %>
-    </div>
-<% end %>
-
   <p>
-    <br>
+    <%= f.label "Name or Family Name" %>
+    <%= f.text_field :full_name, :required => true %>
+  </p>
+  <p>
     <%= radio_button_tag(:attending, true) %>
       <strong><%= label_tag(:attending, "We'll be there!") %></strong><br>
     <%= radio_button_tag(:attending, false) %>

@@ -33,7 +33,7 @@ class ResponsesController < ApplicationController
 
   private
     def response_params
-      params.require(:response).permit(:first_name, :last_name, :attending?, :number_of_attendees, :food_allergies, :song_title, :singer, :comment)
+      params.require(:response).permit(:full_name, :attending?, :number_of_attendees, :food_allergies, :song_title, :singer, :comment)
     end
 
 end

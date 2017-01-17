@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117021855) do
+ActiveRecord::Schema.define(version: 20170117043642) do
 
   create_table "responses", force: :cascade do |t|
     t.string   "first_name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170117021855) do
     t.string   "song_title"
     t.string   "singer"
     t.string   "comment"
+    t.string   "full_name"
   end
 
 end

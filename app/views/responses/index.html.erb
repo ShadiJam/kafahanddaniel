@@ -2,8 +2,7 @@
 <%= link_to 'New RSVP', new_response_path %>
 <table>
   <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
+    <th>Name</th>
     <th>Attending</th>
     <th>Number of Attendees</th>
     <th>Allergies</th>
@@ -14,8 +13,7 @@
 
   <% @responses.each do |response| %>
     <tr>
-      <td><%= response.first_name %></td>
-      <td><%= response.last_name %></td>
+      <td><%= response.full_name %></td>
       <td><%= response.attending %></td>
       <td><%= response.number_of_attendees %></td>
       <td><%= response.food_allergies %></td>

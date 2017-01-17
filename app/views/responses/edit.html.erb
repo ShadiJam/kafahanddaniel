@@ -6,7 +6,7 @@
     <div id="error_explanation">
       <h2>
         <%= pluralize(@response.errors.count, "error") %> prohibited
-        this article from being saved:
+        this RSVP from being saved:
       </h2>
       <ul>
         <% @response.errors.full_messages.each do |msg| %>
@@ -17,12 +17,8 @@
   <% end %>
   <%= form_for :response, url: responses_path do |f| %>
     <p>
-      <strong><%= f.label :first_name %></strong><br>
-      <%= f.text_field :first_name, :required => true %>
-    </p>
-    <p>
-      <strong><%= f.label :last_name %><strong><br>
-      <%= f.text_field :last_name, :required => true%>
+      <strong><%= f.label :full_name %></strong><br>
+      <%= f.text_field :full_name, :required => true %>
     </p>
     <p>
       <br>
