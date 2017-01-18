@@ -11,6 +11,17 @@
    background-color: #CA054D;
  }
 
+div.side-menu {
+  position: relative;
+}
+div.side-menu img {
+  position: absolute;
+}
+
+ul#mobile-demo.side-nav li a {
+  position: relative;
+}
+
  a.brand-logo img {
    width: 120px;
    height: 120px;

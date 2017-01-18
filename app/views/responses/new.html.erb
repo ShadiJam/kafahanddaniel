@@ -28,12 +28,7 @@
 
     <div class="row">
      <div class="input-field col s12">
-        <select>
-            <option value="" disabled selected></option>
-            <option value="1"><%= label_tag(:attending, "We'll be there!") %></option>
-            <option value="2"><%= label_tag(:attending, "Unfortunately, we are unable to attend.") %></option>
-        </select>
-        <label>Will you attend?</label>
+       <%= f.select(:attending, [["We'll be there!", true], ["Unfortunately, we are unable to attend.", false]], :prompt => "Will you attend?") %>
       </div>
     </div>
     <div class="row">
