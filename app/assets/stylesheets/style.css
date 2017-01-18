@@ -6,85 +6,109 @@
  * Made By MaterializeCSS.com
  */
 
-nav {
-  height: 100px;
-  background-color: #CA054D;
-}
+ nav {
+   height: 100px;
+   background-color: #CA054D;
+ }
 
-p {
-  line-height: 2rem;
-}
+ a.brand-logo img {
+   width: 120px;
+   height: 120px;
+   margin-left: 160px;
+ }
 
-a.button-collapse img {
-  max-width: 120px;
-  max-height: 120px;
-  padding-top: 10px;
-  padding-right: 20px;
-}
+ p {
+   line-height: 2rem;
+ }
 
-button.btn.waves-effect.waves-light {
-  margin-left: 30px;
-  margin-bottom: 30px;
-  background-color: #CA054D;
-}
+ h1.header.col.s12.light {
+   padding-left: 20px;
+ }
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
+ table.bordered.centered.responsive-table.striped {
+   margin-left: 40px;
+   margin-right: 40px;
+   vertical-align: middle;
+ }
 
-div#index-banner.parallax-container {
-  height: 500px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
+ ul.right.hide-on-med-and-down a {
+   vertical-align: middle;
+ }
 
-div.section.no-pad-bot {
-  color: white;
-}
+ a.button-collapse img {
+   max-width: 120px;
+   max-height: 120px;
+   padding-top: 10px;
+   padding-right: 20px;
+ }
 
-div.parallax img {
-  width: 600px;
-}
+ button.btn.waves-effect.waves-light {
+   margin-left: 30px;
+   margin-bottom: 30px;
+   background-color: #CA054D;
+ }
 
-div.icon-block img {
-  max-width: 120px;
-  max-height: 120px;
-}
+ .parallax-container {
+   min-height: 380px;
+   line-height: 0;
+   height: auto;
+   color: rgba(255,255,255,.9);
+ }
+   .parallax-container .section {
+     width: 100%;
+   }
 
-li.rsvp a {
-  color: white;
-}
+ div#index-banner.parallax-container {
+   height: 500px;
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+ }
 
-@media only screen and (max-width : 1024px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
+ div.parallax img {
+   padding-bottom: 70px;
+ }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
+ div.section.no-pad-bot {
+   color: white;
+ }
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
+ div.parallax img {
+   width: 600px;
+ }
 
-footer.page-footer {
-  margin: 0;
-}
+ div.icon-block img {
+   max-width: 120px;
+   max-height: 120px;
+ }
+
+ li.rsvp a {
+   color: white;
+ }
+
+ @media only screen and (max-width : 1024px) {
+   .parallax-container .section {
+     position: absolute;
+     top: 40%;
+   }
+   #index-banner .section {
+     top: 10%;
+   }
+ }
+
+ @media only screen and (max-width : 600px) {
+   #index-banner .section {
+     top: 0;
+   }
+ }
+
+ .icon-block {
+   padding: 0 15px;
+ }
+ .icon-block .material-icons {
+   font-size: inherit;
+ }
+
+ footer.page-footer {
+   margin: 0;
+ }

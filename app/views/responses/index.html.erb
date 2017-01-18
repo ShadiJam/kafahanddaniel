@@ -1,27 +1,31 @@
-<h1>All RSVPs</h1>
-<%= link_to 'New RSVP', new_response_path %>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Attending</th>
-    <th>Number of Attendees</th>
-    <th>Allergies</th>
-    <th>Song Requests</th>
-    <th>Artist</th>
-    <th>Messages</th>
-  </tr>
+<h1 class="header col s12 light">Your RSVP's</h1>
 
-  <% @responses.each do |response| %>
-    <tr>
-      <td><%= response.full_name %></td>
-      <td><%= response.attending %></td>
-      <td><%= response.number_of_attendees %></td>
-      <td><%= response.food_allergies %></td>
-      <td><%= response.song_title %></td>
-      <td><%= response.singer %></td>
-      <td><%= response.comment %></td>
-      <td><%= link_to 'Show', response_path(response) %></td> |
-      <td><%= link_to 'Edit', edit_response_path(response) %></td>
-    </tr>
-  <% end %>
-</table>
+<table class="bordered centered striped">
+       <thead>
+         <tr>
+             <th data-field="id">Name</th>
+             <th data-field="attending">Attending</th>
+             <th data-field="number_of_attendees">Number of Attendees</th>
+             <th data-field="food_allergies">Allergies</th>
+             <th data-field="song_title">Song Requests</th>
+             <th data-field="singer">Artist</th>
+             <th data-field="comment">Messages</th>
+         </tr>
+       </thead>
+
+       <tbody>
+         <% @responses.each do |response| %>
+         <tr>
+           <td><%= response.full_name %></td>
+           <td><%= response.attending %></td>
+           <td><%= response.number_of_attendees %></td>
+           <td><%= response.food_allergies %></td>
+           <td><%= response.song_title %></td>
+           <td><%= response.singer %></td>
+           <td><%= response.comment %></td>
+           <td><%= link_to 'Show', response_path(response) %></td> |
+           <td><%= link_to 'Edit', edit_response_path(response) %></td>
+         </tr>
+           <% end %>
+       </tbody>
+     </table>
