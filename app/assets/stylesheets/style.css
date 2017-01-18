@@ -59,6 +59,10 @@ ul#mobile-demo.side-nav li a {
    background-color: #CA054D;
  }
 
+button.btn.waves-effect.waves-light a {
+  color: white;
+}
+
  .parallax-container {
    min-height: 380px;
    line-height: 0;

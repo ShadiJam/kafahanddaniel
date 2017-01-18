@@ -1,5 +1,5 @@
 <h1 class="header col s12 light">Your RSVP's</h1>
-
+<button class="btn waves-effect waves-light"><%= link_to "CSV", responses_path(format: "csv") %></button>
 <table class="bordered centered striped">
        <thead>
          <tr>
@@ -10,7 +10,9 @@
              <th data-field="song_title">Song Requests</th>
              <th data-field="singer">Artist</th>
              <th data-field="comment">Messages</th>
+             <th>Total attendees</th>
          </tr>
+
        </thead>
 
        <tbody>
@@ -24,8 +26,13 @@
            <td><%= response.singer %></td>
            <td><%= response.comment %></td>
            <td><%= link_to 'Show', response_path(response) %></td> |
-           <td><%= link_to 'Edit', edit_response_path(response) %></td>
+           <td><%= link_to 'Edit', edit_response_path(response) %></td> |
+           <td><%= link_to 'Destroy', response_path(response),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></td>
+           <td><%= @response.sum(:number_of_attendees) %></td>
          </tr>
+         <tr>
            <% end %>
        </tbody>
      </table>
