@@ -8,4 +8,4 @@ The Response model has attributes that include attendance, number of attendees, 
 
 Kafah and Daniel will be able to download all RSVP submissions to a CSV file.
 
-* This wedding website application is built with Ruby 5.0.1 and uses the Devise gem in order to allow administrative capacities.
+* This wedding website application is built with Ruby 5.0.1 and uses the Devise gem in order to allow administrative capacities and Materialize for styling. 

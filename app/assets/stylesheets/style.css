@@ -5,6 +5,10 @@
  *
  * Made By MaterializeCSS.com
  */
+body {
+  padding-bottom: 30px;
+}
+
 
  nav {
    height: 100px;
@@ -75,9 +79,13 @@ button.btn.waves-effect.waves-light a {
 
  div#index-banner.parallax-container {
    height: 500px;
-   width: 90%;
+   width: 100%;
    margin-left: auto;
    margin-right: auto;
+ }
+
+ img.drunk {
+   padding-top: 70px;
  }
 
  div.parallax img {

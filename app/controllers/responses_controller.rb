@@ -1,5 +1,6 @@
 class ResponsesController < ApplicationController
 before_action :set_response, only: [:show, :edit, :update, :destroy]
+before_action :authenticate_user!, only: [:index]
 
   def index
     @responses = Response.all
@@ -11,7 +12,6 @@ before_action :set_response, only: [:show, :edit, :update, :destroy]
   end
 
   def show
-    @response = Response.find(params[:id])
   end
 
   def new
@@ -19,7 +19,6 @@ before_action :set_response, only: [:show, :edit, :update, :destroy]
   end
 
   def edit
-    @response = Response.find(params[:id])
   end
 
   def create
@@ -30,7 +29,7 @@ before_action :set_response, only: [:show, :edit, :update, :destroy]
         format.html { redirect_to @response, notice: 'Your RSVP has been sent.' }
         format.json { render :show, status: :created }
       else
-        format.html { redirect_to @response }
+        format.html { redirect_to new_response_path, notice: 'Something went terribly wrong.' }
         format.json { render json: @response.errors, status: :unprocessable_entity }
       end
     end

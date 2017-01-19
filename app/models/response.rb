@@ -1,5 +1,5 @@
 class Response < ApplicationRecord
-  validates :full_name, presence: true
+  validates :full_name, :attending, presence: true
   validates_numericality_of :number_of_attendees, :only_integer => true
 
   def self.to_csv
@@ -14,8 +14,12 @@ class Response < ApplicationRecord
     end
   end
 
-  def total_attendees
-    attArr = Array.new
-    attArr.sum { |a| a.number_of_attendees }
+  def self.total_attendees
+    attArr = []
+    Response.where(attending: true).all.each do |response|
+      attArr << response.number_of_attendees
+    end
+    attArr.sum
   end
+
 end
