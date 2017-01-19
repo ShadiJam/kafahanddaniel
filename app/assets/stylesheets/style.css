@@ -9,18 +9,14 @@ body {
   padding-bottom: 30px;
 }
 
+div.container {
+  width: 90%;
+}
 
  nav {
    height: 100px;
    background-color: #CA054D;
  }
-
-div.side-menu {
-  position: relative;
-}
-div.side-menu img {
-  position: absolute;
-}
 
 ul#mobile-demo.side-nav li a {
   position: relative;
@@ -88,8 +84,12 @@ button.btn.waves-effect.waves-light a {
    padding-top: 70px;
  }
 
- div.parallax img {
+ img.all {
    padding-bottom: 70px;
+ }
+
+ div.parallax img {
+   padding-top: 70px;
  }
 
  div.section.no-pad-bot {

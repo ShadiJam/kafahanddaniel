@@ -20,39 +20,26 @@
   </head>
 
   <body>
-
-
     <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo"><%= image_tag "animal.jpg" %></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <% if user_signed_in? %>
-            <li><a href="/">Home</a></li>
-            <li>  <%= link_to 'RSVP', new_response_path %> </li>
-            <li><%= link_to 'All Responses', controller: 'responses' %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
-          <% else %>
-            <li><a href="/">Home</a></li>
-            <li>  <%= link_to 'RSVP', new_response_path %> </li>
-          <% end %>
-        </ul>
-      <div class="side-menu">
-        <ul class="side-nav" id="mobile-demo">
-          <% if user_signed_in? %>
-            <li><a href="/">Home</a></li>
-            <li>  <%= link_to 'RSVP', new_response_path %> </li>
-            <li><%= link_to 'All Responses', controller: 'responses' %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
-          <% else %>
-            <li><a href="/">Home</a></li>
-            <li>  <%= link_to 'RSVP', new_response_path %> </li>
-          <% end %>
-          <img src="/assets/wedding.jpg" alt="Unsplashed background img 1">
-        </ul>
-      </div>
-      </div>
-    </nav>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><%= image_tag "animal.jpg" %></a>
+          <ul class="right">
+            <% if user_signed_in? %>
+              <li><a href="/">Home</a></li>
+              <li><%= link_to 'RSVP', new_response_path %> </li>
+              <li><%= link_to 'All Responses', controller: 'responses' %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+            <% else %>
+              <li><a href="/">Home</a></li>
+              <li><%= link_to 'RSVP', new_response_path %> </li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </nav>
 
 <div class="container">
   <%= yield %>

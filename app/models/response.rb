@@ -1,5 +1,5 @@
 class Response < ApplicationRecord
-  validates :full_name, :attending, presence: true
+  validates :full_name, presence: true
   validates_numericality_of :number_of_attendees, :only_integer => true
 
   def self.to_csv
