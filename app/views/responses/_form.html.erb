@@ -18,48 +18,47 @@
      <form class="col s12">
        <div class="row">
          <div class="input-field col s12">
-           <%= f.label "Name or Family Name" %>
-           <%= f.text_field :full_name, :required => true %>
+           <input placeholder="" id="full_name" type="text" class="validate">
+           <label for="full_name">Full or Family Name</label>
          </div>
        </div>
       <div class="row">
-       <div class="input-field col s12">
+       <div class="col s12">
          <select>
-           <option value="" disabled selected>Will you attend?</option>
+           <option value="0" disabled selected>Will you attend?</option>
            <option value="1">Yes, we'll be there!</option>
            <option value="2">Unfortunately we are unable to attend.</option>
          </select>
-         <label></label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <%= f.label "Number of attendees:" %>
-          <%= f.number_field :number_of_attendees %>
+          <input placeholder="" id="number_of_attendees" type="number" class="validate">
+          <label for="number_of_attendees">Number of attendees (Please input '0' if you are unable to attend)</label>
         </div>
       </div>
        <div class="row">
          <div class="input-field col s12">
-           <%= f.label "Any food allergies we should know about?" %>
-           <%= f.text_field :food_allergies %>
+           <input placeholder="" id="food_allergies" type="text" class="validate">
+           <label for="food_allergies">Any food allergies we should know about?</label>
          </div>
        </div>
        <div class="row">
          <div class="input-field col s12">
-           <%= f.label "Please name a song that will get you on the dance floor!" %>
-           <%= f.text_field :song_title %><br>
+           <input placeholder="" id="song_title" type="text" class="validate">
+           <label for="song_title">Please name a song that will get you on the dance floor!</label>
          </div>
        </div>
        <div class="row">
          <div class="input-field col s12">
-           <%= f.label "Artist/Band/Singer name goes here!" %>
-           <%= f.text_field :singer %>
+           <input placeholder="" id="singer" type="text" class="validate">
+           <label for="singer">The Artist/Band/Singer name goes here!</label>
          </div>
        </div>
        <div class="row">
          <div class="input-field col s12">
-           <%= f.label "Feel free to leave a message for the happy couple:" %>
-           <%= f.text_field :comment %>
+           <input placeholder="" id="comment" type="text" class="validate">
+           <label for="comment">Feel free to leave a message for the happy couple!</label>
          </div>
        </div>
 

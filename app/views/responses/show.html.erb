@@ -1,37 +1,39 @@
-<div class="row">
-<h1>Thank you for your response!</h1>
-<p>
-  <strong>Name:</strong>
-  <%= @response.full_name %>
-</p>
-<p>
-  <strong>Attending?</strong><br>
-  <% if @response.attending = true %>
-    <%= "Yes" %>
-  <% else %>
-    <%= "No" %>
-  <% end %>
-</p>
-<p>
-  <strong>Number of attendees:</strong><br>
-  <%= @response.number_of_attendees %>
-</p>
-<p>
-  <strong>Food Allergies:</strong><br>
-  <%= @response.food_allergies %>
-</p>
-<p>
-  <strong>Song request:</strong><br>
-  <%= @response.song_title %><br>
-</p>
-<p>
-  <strong>Artist:</strong><br>
-  <%= @response.singer %>
-</p>
-<p>
-  <strong>Message:</strong><br>
-  <%= @response.comment %>
-</p>
-<td><%= link_to 'Edit', edit_response_path(response) %></td>
+<div class="show">
+      <h1>Thank you for your response!</h1>
+    <p>
+        <strong>Name:</strong>
+      <%= @response.full_name %>
+    </p>
+    <p>
+        <strong>Attending?</strong><br>
+      <% if @response.attending == true %>
+        <%= "Yes" %>
+      <% else %>
+        <%= "No" %>
+      <% end %>
+    </p>
+    <p>
+        <strong>Number of attendees:</strong><br>
+      <%= @response.number_of_attendees %>
+    </p>
+    <p>
+        <strong>Food Allergies:</strong><br>
+      <%= @response.food_allergies %>
+    </p>
+    <p>
+        <strong>Song request:</strong><br>
+      <%= @response.song_title %><br>
+    </p>
+    <p>
+        <strong>Artist:</strong><br>
+      <%= @response.singer %>
+    </p>
+    <p>
+        <strong>Message:</strong><br>
+      <%= @response.comment %>
+    </p>
 
+    <button class="btn waves-effect waves-light">
+      <%= link_to 'Edit', edit_response_path(response) %>
+    </button>
 </div>

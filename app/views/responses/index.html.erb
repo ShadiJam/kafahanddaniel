@@ -10,7 +10,7 @@
              <th data-field="song_title">Song Requests</th>
              <th data-field="singer">Artist</th>
              <th data-field="comment">Messages</th>
-             <th>Total attendees</th>
+             <th data-field="total_attendees">Total Attendees</th>
          </tr>
 
        </thead>
@@ -25,12 +25,13 @@
            <td><%= response.song_title %></td>
            <td><%= response.singer %></td>
            <td><%= response.comment %></td>
+           <td><%= response.total_attendees %></td>
            <td><%= link_to 'Show', response_path(response) %></td> |
            <td><%= link_to 'Edit', edit_response_path(response) %></td> |
            <td><%= link_to 'Destroy', response_path(response),
                     method: :delete,
                     data: { confirm: 'Are you sure?' } %></td>
-           <td><%= @response.sum(:number_of_attendees) %></td>
+
          </tr>
          <tr>
            <% end %>

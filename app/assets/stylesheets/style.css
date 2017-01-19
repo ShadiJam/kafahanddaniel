@@ -101,6 +101,9 @@ button.btn.waves-effect.waves-light a {
    color: white;
  }
 
+ div.show {
+   margin-left: 40px;
+ }
  @media only screen and (max-width : 1024px) {
    .parallax-container .section {
      position: absolute;

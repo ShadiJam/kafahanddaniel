@@ -1,4 +1,6 @@
 class ResponsesController < ApplicationController
+before_action :set_response, only: [:show, :edit, :update, :destroy]
+
   def index
     @responses = Response.all
 
@@ -23,31 +25,44 @@ class ResponsesController < ApplicationController
   def create
     @response = Response.new(response_params)
 
-    if @response.save
-      redirect_to @response
-    else
-      render 'new'
+    respond_to do |format|
+      if @response.save
+        format.html { redirect_to @response, notice: 'Your RSVP has been sent.' }
+        format.json { render :show, status: :created }
+      else
+        format.html { redirect_to @response }
+        format.json { render json: @response.errors, status: :unprocessable_entity }
+      end
     end
   end
 
-  def update
-    @response = Response.find(params[:id])
 
-    if @response.update(response_params)
-      redirect_to @response
-    else
-      render 'edit'
+  def update
+    respond_to do |format|
+      if @response.update(response_params)
+        format.html { redirect_to @response, notice: 'Your RSVP was updated.' }
+        format.json { render :show, status: :ok }
+      else
+        format.html { render :edit }
+        format.json { render json: @response.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def destroy
-    @response = Response.find(params[:id])
     @response.destroy
-
-    redirect_to responses_path
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: 'Your RSVP was successfully deleted.' }
+      format.json { head :no_content }
+    end
   end
 
   private
+
+    def set_response
+      @response = Response.find(params[:id])
+    end
+
     def response_params
       params.require(:response).permit(:full_name, :attending, :number_of_attendees, :food_allergies, :song_title, :singer, :comment)
     end
