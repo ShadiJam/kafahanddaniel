@@ -1,24 +1,11 @@
-# README
+# Kafah and Daniel's Wedding Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+After researching all kinds of wedding websites to find the best option for my cousin Kafah and, her future husband, Daniel's wedding, it seemed to make more sense to build one from scratch.
 
-Things you may want to cover:
+The application allows invitees to view information about the wedding, as well as submit their RSVPs.
 
-* Ruby version
+The Response model has attributes that include attendance, number of attendees, food allergies, song requests, as well as messages for the couple.
 
-* System dependencies
+Kafah and Daniel will be able to download all RSVP submissions to a CSV file.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* This wedding website application is built with Ruby 5.0.1 and uses the Devise gem in order to allow administrative capacities.
