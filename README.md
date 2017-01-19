@@ -1,6 +1,6 @@
 # Kafah and Daniel's Wedding Website
 
-After researching all kinds of wedding websites to find the best option for my cousin Kafah and, her future husband, Daniel's wedding, it seemed to make more sense to build one from scratch.
+After researching many different wedding websites to find the best option for my cousin Kafah and her future husband, Daniel's, wedding, it seemed to make more sense to build one from scratch.
 
 The application allows invitees to view information about the wedding, as well as submit their RSVPs.
 
