@@ -9,6 +9,12 @@ body {
   padding-bottom: 5px;
 }
 
+h1#welcome.header.col.s12.light {
+  float: right;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+
 div.container {
   width: 100%;
 }
@@ -22,10 +28,14 @@ div.form {
   margin-right: 100px;
 }
 
- nav {
+nav {
    height: 100px;
-   background-color: #FD3E81;
+   background-color: #FC4B89 !important;
  }
+
+div.nav-wrapper {
+  background-color: #FC4B89 !important;
+}
 
 ul#mobile-demo.side-nav li a {
   position: relative;
@@ -56,7 +66,7 @@ ul#mobile-demo.side-nav li a {
    padding-right: 20px;
  }
 
- button.btn.waves-effect.waves-light {
+button.btn.waves-effect.waves-light {
    margin-bottom: 30px;
    background-color: #FD3E81 !important;
  }
@@ -69,14 +79,15 @@ button.btn.waves-effect.waves-light a {
   color: white;
 }
 
- .parallax-container {
+.parallax-container {
    min-height: 380px;
    line-height: 0;
    height: auto;
  }
-   .parallax-container .section {
+
+.parallax-container .section {
      width: 100%;
-   }
+}
 
  div#index-banner.parallax-container {
    height: 500px;
@@ -96,11 +107,11 @@ img.happy {
   margin-top: -40%;
 }
 
- img.all {
+img.all {
    padding-bottom: 70px;
  }
 
- div.section.no-pad-bot {
+div.section.no-pad-bot {
    color: white;
  }
 
@@ -113,11 +124,11 @@ img.happy {
    max-height: 120px;
  }
 
- li.rsvp a {
+li.rsvp a {
    color: white;
  }
 
- div.show {
+div.show {
    margin-left: 100px;
  }
 
@@ -147,31 +158,35 @@ div.table {
    }
  }
 
- .icon-block {
+.icon-block {
    padding: 0 15px;
  }
- .icon-block .material-icons {
+.icon-block .material-icons {
    font-size: inherit;
  }
 
- footer.page-footer {
+footer.page-footer {
    margin: 0;
    background-color: #FD3E81 !important;
  }
 
- p.center.light a {
+div.footer-copyright {
+   background-color: #FD3E81 !important;
+ }
+
+p.center.light a {
    text-decoration: black;
  }
 
- h5#forget.white-text {
+h5#forget.white-text {
    margin-left: 100px;
  }
 
- p.foot {
+p.foot {
    margin-left: 100px;
  }
 
- p.forget {
+p.forget {
    margin-left: 100px;
    color: white;
  }
