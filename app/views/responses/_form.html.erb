@@ -1,12 +1,20 @@
-
+<div class="form"
   <%= simple_form_for @response do |f| %>
+    <%= f.label "Full or family name:" %>
     <%= f.input :full_name %>
+    <%= f.label "Please check the box if you will attend:" %>
     <%= f.input :attending %>
+    <%= f.label "Number of attendees:" %>
     <%= f.input :number_of_attendees %>
+    <%= f.label "Please let us know if there are any food allergies we should be aware of:" %>
     <%= f.input :food_allergies %>
+    <%= f.label "Please request a song that will guarantee to get you on the dance floor!" %>
     <%= f.input :song_title %>
+    <%= f.label "Please provide the singer, artist, or band name:" %>
     <%= f.input :singer %>
+    <%= f.label "Leave a message for the happy couple!" %>
     <%= f.input :comment %>
     <button class="btn waves-effect waves-light"><%= submit_tag "RSVP" %></button>
 
   <% end %>
+</div>

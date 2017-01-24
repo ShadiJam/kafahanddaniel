@@ -6,16 +6,25 @@
  * Made By MaterializeCSS.com
  */
 body {
-  padding-bottom: 30px;
+  padding-bottom: 5px;
 }
 
 div.container {
-  width: 90%;
+  width: 100%;
+}
+
+div.container a {
+  color: white;
+}
+
+div.form {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
  nav {
    height: 100px;
-   background-color: #CA054D;
+   background-color: #FD3E81;
  }
 
 ul#mobile-demo.side-nav li a {
@@ -36,12 +45,6 @@ ul#mobile-demo.side-nav li a {
    padding-left: 20px;
  }
 
- table.bordered.centered.responsive-table.striped {
-   margin-left: 40px;
-   margin-right: 40px;
-   vertical-align: middle;
- }
-
  ul.right.hide-on-med-and-down a {
    vertical-align: middle;
  }
@@ -54,10 +57,13 @@ ul#mobile-demo.side-nav li a {
  }
 
  button.btn.waves-effect.waves-light {
-   margin-left: 30px;
    margin-bottom: 30px;
-   background-color: #CA054D;
+   background-color: #FD3E81 !important;
  }
+
+td.link a {
+  color: black;
+}
 
 button.btn.waves-effect.waves-light a {
   color: white;
@@ -67,7 +73,6 @@ button.btn.waves-effect.waves-light a {
    min-height: 380px;
    line-height: 0;
    height: auto;
-   color: rgba(255,255,255,.9);
  }
    .parallax-container .section {
      width: 100%;
@@ -80,16 +85,19 @@ button.btn.waves-effect.waves-light a {
    margin-right: auto;
  }
 
- img.drunk {
-   padding-top: 70px;
+img.drunk {
+   top: 1%;
+   left: 50%;
+   margin-top: -50%;
  }
+
+img.happy {
+  left: 50%;
+  margin-top: -40%;
+}
 
  img.all {
    padding-bottom: 70px;
- }
-
- div.parallax img {
-   padding-top: 70px;
  }
 
  div.section.no-pad-bot {
@@ -110,8 +118,19 @@ button.btn.waves-effect.waves-light a {
  }
 
  div.show {
-   margin-left: 40px;
+   margin-left: 100px;
  }
+
+h1.header.col.s12.light {
+  margin-left: 50px;
+}
+
+div.table {
+  margin-left: 100px;
+  margin-right: 100px;
+  vertical-align: middle;
+}
+
  @media only screen and (max-width : 1024px) {
    .parallax-container .section {
      position: absolute;
@@ -137,4 +156,9 @@ button.btn.waves-effect.waves-light a {
 
  footer.page-footer {
    margin: 0;
+   background-color: #FD3E81 !important;
+ }
+
+ p.center.light a {
+   text-decoration: black;
  }
