@@ -162,3 +162,16 @@ div.table {
  p.center.light a {
    text-decoration: black;
  }
+
+ h5#forget.white-text {
+   margin-left: 100px;
+ }
+
+ p.foot {
+   margin-left: 100px;
+ }
+
+ p.forget {
+   margin-left: 100px;
+   color: white;
+ }
