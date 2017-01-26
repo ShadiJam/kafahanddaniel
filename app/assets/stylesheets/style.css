@@ -41,6 +41,10 @@ ul#mobile-demo.side-nav li a {
   position: relative;
 }
 
+p.children {
+  margin-left: 100px;
+}
+
  a.brand-logo img {
    width: 120px;
    height: 120px;
